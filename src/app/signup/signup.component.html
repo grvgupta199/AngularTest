@@ -1,0 +1,15 @@
+<h1>Sign Up </h1>
+
+<form #signupForm="ngForm" (ngSubmit)="Signup(signupForm.value)" class="text-center border border-light p-5">
+<input type="text" ngModel name="username" placeholder=" user name" class="form-control mb-4">
+<input type="password" ngModel name="password" placeholder=" password" class="form-control mb-4">
+<input type="password" ngModel name="confirmpassword" placeholder=" confirm password" class="form-control mb-4">
+
+<button block="true" class="my-4 btn btn-success">Sign up</button>
+
+<div  *ngIf="isExists">
+    User already exists. 
+</div>
+
+
+</form>
